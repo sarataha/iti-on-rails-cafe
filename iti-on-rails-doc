@@ -1,0 +1,45 @@
+The Product model, controller and tests
+
+The model
+
+The Product model contains name, description and price of the product.
+
+A product item has many orders through order item, as orders have product through order item
+
+A product item belongs to a category
+
+
+test
+
+The Product model can save and hold data for product.
+
+A user's ordered item should be directly accessible from the user model
+
+Controller
+
+GET Index action ('/products')
+
+1. All products offered by dinner_dash should be made available
+
+2. All categories must also be available
+
+POST Create action ('/products')
+
+1. A product item is added if the category isi supplied.
+
+2. If the save is successful, the user is redirected to the list of registered product under the same Category as the Product with a notice depicting a successful save.
+
+3. For an unsuccessful save, the user is directed back to the add product pages with a notice depicting an unsuccessful save.
+
+GET Show action ('/products/1')
+
+1. Full details of the product is available for the view.
+
+2. The user ratings and comments need to be updated.
+
+
+PATCH Update action ('/products/1/edit')
+
+1. The product is updated only by the admin.
+
+2. After successful update, there should be a redirect to /products or show_path
